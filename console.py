@@ -15,7 +15,13 @@ from models import storage
 """
 global CLASSES list
 """
-Classes = ["BaseModel", "User", "City", "Place", "State", "Amenity", "Review"]
+ClASSES = ["BaseModel",
+          "User",
+          "City",
+          "Place",
+          "State",
+          "Amenity",
+          "Review"]
 
 
 class HBNBCommand(cmd.Cmd):
@@ -25,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
     Attr:
       prompt(str): the command prompt
     """
-    prompt = '(hbnb)'
+    prompt = "(hbnb)"
 
     def default(self, arg):
         """
@@ -76,7 +82,7 @@ class HBNBCommand(cmd.Cmd):
                 inst = eval(info['__class__'])(**info)
                 str_all.append(inst.__str__())
         else:
-            if args[0] not in Classes:
+            if args[0] not in ClASSES:
                 print("** class doesn't exist **")
                 return
             else:
@@ -122,7 +128,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
             return
-        elif args[0] not in Classes:
+        elif args[0] not in ClASSES:
             print("** class doesn't exist **")
             return
         inst = eval(args[0])()
@@ -138,7 +144,7 @@ class HBNBCommand(cmd.Cmd):
         args = list(arg.split())
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] not in Classes:
+        elif args[0] not in ClASSES:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -163,7 +169,7 @@ class HBNBCommand(cmd.Cmd):
         args = list(arg.split())
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] not in Classes:
+        elif args[0] not in ClASSES:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -183,7 +189,7 @@ class HBNBCommand(cmd.Cmd):
         args = list(arg.split())
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] not in Classes:
+        elif args[0] not in ClASSES:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -217,7 +223,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
         else:
-            if args[0] not in Classes:
+            if args[0] not in ClASSES:
                 print("** class doesn't exist **")
                 return
             else:
@@ -227,5 +233,5 @@ class HBNBCommand(cmd.Cmd):
         print(num_inst)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     HBNBCommand().cmdloop()
