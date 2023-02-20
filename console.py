@@ -121,7 +121,6 @@ class HBNBCommand(cmd.Cmd):
         elif args[0] not in ClASSES:
             print("** class doesn't exist **")
             return
-            
         inst = eval(args[0])()
         inst.save()
         print(inst.id)
