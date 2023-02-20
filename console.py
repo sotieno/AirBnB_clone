@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Entry point of the command interpreter
-"""
+"""Entry point of the command interpreter"""
 import cmd
 from models import storage
 
@@ -30,7 +28,6 @@ class HBNBCommand(cmd.Cmd):
         do_update = self.update()
         do_count = self.count()
         """
-
         if "." not in arg or "(" not in arg or len(arg) < 10:
             print("** command not found **")
             return
@@ -58,12 +55,13 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, arg):
         """
         Prints all string representation of all
-        instances based or not on the class name.
-        Ex: $ all BaseModel or $ all.
+        instances based or not on the class name
+        Eg: $ all BaseModel or $ all
         """
         instances = storage.all().copy()
         str_all = []
         args = list(arg.split())
+
         if len(args) == 0:
             for a_class, info in instances.items():
                 inst = eval(info['__class__'])(**info)
@@ -103,6 +101,7 @@ class HBNBCommand(cmd.Cmd):
         Checks for id
         """
         current_inst = storage.all()
+
         for keys, values in current_inst.items():
             if values['id'] == id:
                 return False
@@ -111,16 +110,18 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, arg):
         """
         Creates a new instance of BaseModel, saves (to JSON file)
-        and prints the id.
+        and prints the id
         Eg: $ create BaseModel
         """
         args = list(arg.split())
+
         if len(args) == 0:
             print("** class name missing **")
             return
         elif args[0] not in ClASSES:
             print("** class doesn't exist **")
             return
+            
         inst = eval(args[0])()
         inst.save()
         print(inst.id)
