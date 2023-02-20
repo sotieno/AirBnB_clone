@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 This module provides the class FileStorage
 """
@@ -40,7 +41,7 @@ class FileStorage:
 
     def reload(self):
         """
-        desrializes the JSON file to __objects
+        deserializes the JSON file to __objects
         """
         if os.path.exists(FileStorage.__file_path):
             with open(FileStorage.__file_path, encoding="UTF-8") as fd:

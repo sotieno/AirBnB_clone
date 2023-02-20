@@ -3,6 +3,7 @@
 Entry point of the command interpreter
 """
 import cmd
+import models
 from models.base_model import BaseModel
 from models.user import User
 from models.city import City
@@ -15,13 +16,7 @@ from models import storage
 """
 global CLASSES list
 """
-ClASSES = ["BaseModel",
-          "User",
-          "City",
-          "Place",
-          "State",
-          "Amenity",
-          "Review"]
+ClASSES = ["BaseModel", "User", "City", "Place", "State", "Amenity", "Review"]
 
 
 class HBNBCommand(cmd.Cmd):
@@ -29,7 +24,7 @@ class HBNBCommand(cmd.Cmd):
     Defines the HBNB Command interpreter
 
     Attr:
-      prompt(str): the command prompt
+        prompt(str): the command prompt
     """
     prompt = "(hbnb)"
 
@@ -137,9 +132,9 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, arg):
         """
-          Prints the string representaion of an instance based on the
-          class name and id.
-          Eg: $ show BaseModel 1234-1234-1234.
+        Prints the string representaion of an instance based on the
+        class name and id.
+        Eg: $ show BaseModel 1234-1234-1234.
         """
         args = list(arg.split())
         if len(args) == 0:
@@ -162,9 +157,9 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         """
-          Deletes an instance based on the class name and id
-          (save the change into the JSON file).
-          eg: $ destroy BaseModel 1234-1234-1234.
+        Deletes an instance based on the class name and id
+        (save the change into the JSON file).
+        eg: $ destroy BaseModel 1234-1234-1234.
         """
         args = list(arg.split())
         if len(args) == 0:
@@ -182,9 +177,9 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, arg):
         """
-          Update a class instance of a given id by addn or updatn a attr dict[]
-          (save the change into the JSON file).
-          Ex: $ update BaseModel 1234-1234-1234 email "aibnb@mail.com".
+        Update a class instance of a given id by addn or updatn a attr dict[]
+        (save the change into the JSON file).
+        Ex: $ update BaseModel 1234-1234-1234 email "aibnb@mail.com".
         """
         args = list(arg.split())
         if len(args) == 0:
@@ -215,7 +210,7 @@ class HBNBCommand(cmd.Cmd):
 
     def count(self, arg):
         """
-          counts and the number of instances of a class.
+        counts and the number of instances of a class.
         """
         instances = storage.all().copy()
         num_inst = 0
@@ -233,5 +228,5 @@ class HBNBCommand(cmd.Cmd):
         print(num_inst)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
