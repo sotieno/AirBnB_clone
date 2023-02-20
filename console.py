@@ -65,9 +65,9 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """
-          Prints all string representation of all
-          instances based or not on the class name.
-          Ex: $ all BaseModel or $ all.
+        Prints all string representation of all
+        instances based or not on the class name.
+        Ex: $ all BaseModel or $ all.
         """
         instances = storage.all().copy()
         str_all = []
