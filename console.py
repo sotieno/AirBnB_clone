@@ -3,14 +3,6 @@
 Entry point of the command interpreter
 """
 import cmd
-import models
-from models.base_model import BaseModel
-from models.user import User
-from models.city import City
-from models.amenity import Amenity
-from models.place import Place
-from models.state import State
-from models.review import Review
 from models import storage
 
 """
@@ -107,6 +99,9 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def check_id(id):
+        """
+        Checks for id
+        """
         current_inst = storage.all()
         for keys, values in current_inst.items():
             if values['id'] == id:
