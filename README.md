@@ -1,6 +1,8 @@
-# Project Overview
+# AirBnB Clone
 
 ![Hbnb_Logo](images/hbnb_logo.jpg)
+
+## Project Overview
 
 The goal of this project is to build a clone of the AirBnB website which will eventually be deployed on a server. It will collectively cover fundamental concepts of higher level programming and at the end of the project the complete web application will be composed of:
 
