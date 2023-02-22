@@ -1,71 +1,16 @@
-# AirBnB Clone - The Console
-The console is the first segment of the AirBnB project that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
+# Project Overview
 
-#### Functionalities of this command interpreter:
-* Create a new object (ex: a new User or a new Place)
-* Retrieve an object from a file, a database etc...
-* Do operations on objects (count, compute stats, etc...)
-* Update attributes of an object
-* Destroy an object
+![Hbnb_Logo](images/hbnb_logo.jpg)
 
-## Table of Content
-* [Environment](#environment)
-* [Installation](#installation)
-* [Examples of use](#examples-of-use)
-* [Authors](#authors)
+This is a project aimed at building a clone of the AirBnB website. It will collectively cover fundamental concepts of higher level programming and at the end of the project the complete web application will be composed of:
 
-## Environment
-This project is interpreted/tested on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+* A command interpreter to manipulate data without a visual interface like in a Shell
+* A website (the front-end) that shows the final product to everyone: static and dynamic
+* A database or files that store data (data = objects)
+* An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
 
-## Installation
-* Clone this repository: `git clone "https://github.com/driiisdev/AirBnB_clone.git"`
-* Access AirBnb directory: `cd AirBnB_clone`
-* Run hbnb(interactively): `./console` and enter command
-* Run hbnb(non-interactively): `echo "<command>" | ./console.py`
+## Preview of final product
 
-## Examples of use
-In interactive mode:
+![Final_Product1](images/final_product1.jpg)
 
-```
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-```
-In non-interactive mode:
-
-```
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-```
-
-## Bugs
-No known bugs at this time.
-
-## Authors
-Idris Yakub - [Github](https://github.com/driiisdev)
-Sylvia Otieno - [Github](https://github.com/sotieno)
+![Final_Product2](images/final_product2.jpg)
