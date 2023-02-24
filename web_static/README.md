@@ -5,3 +5,11 @@ This is the segment of the AirBnB clone project that will collectively cover fun
 
 * Create the HTML files for the web application
 * Create templates for each object of interest
+
+## How to preview the templates
+
+Select the html file of interest. In the page the appears click on the preview option as indicated below.
+
+![Preview](preview.png)
+
+
