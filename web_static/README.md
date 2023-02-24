@@ -10,6 +10,6 @@ This is the segment of the AirBnB clone project that will collectively cover fun
 
 Select the html file of interest. In the page the appears click on the preview option as indicated below.
 
-![Preview](web_static.preview.png)
+![Preview](web_static/preview.png)
 
 
